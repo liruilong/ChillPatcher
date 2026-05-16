@@ -96,6 +96,14 @@ C:\Users\<你的用户名>\AppData\LocalLow\Nestopi\Chill With You\Player.log
 
 > 📖 UI 系统基于 OneJS + Preact 构建，支持热重载开发。详见 [自定义 UI 系统（开发者文档）](#️-自定义-ui-系统)。
 
+### 🔗 本地集成模块
+- **🌐 本地 HTTP 接口**：提供可配置的 localhost/LAN 集成入口，支持 Token 鉴权
+- **🧰 本地工具接入**：适合本地自动化脚本、桌面助手、vibe coding 辅助工具、直播/语音工作流、快捷键面板、Stream Deck 等可信调用方
+- **💬 AIChat 集成**：支持从外部工具触发 AIChat 对话，也支持直接播报文本、字幕和表情
+- **🎛️ 游戏能力控制**：支持音乐播放控制、番茄钟控制、环境音量/静音和预设切换等能力
+- **🧩 模块化扩展**：通过独立处理器注册接口，便于继续接入笔记、日历等本地自动化能力
+- 详细文档: [本地集成模块 README](ChillPatcher.Module.LocalIntegration/README.md)
+
 ![图形化IME](<img/UI/图形化IME.png>)
 
 ![场景浏览器](<img/UI/场景浏览器.png>)
@@ -103,6 +111,8 @@ C:\Users\<你的用户名>\AppData\LocalLow\Nestopi\Chill With You\Player.log
 ![示例小组件](<img/UI/示例小组件.png>)
 
 ![示例小组件2](<img/UI/示例小组件2.png>)
+
+![本地集成播报示例](<img/UI/本地集成播报示例.jpg>)
 
 ### 🌐 流媒体音乐模块
 
@@ -143,6 +153,7 @@ ChillPatcher 采用模块化架构设计，通过 SDK 提供扩展接口，支�
 ChillPatcher/
 ├── ChillPatcher.SDK/           ← SDK 项目，提供模块开发接口
 ├── ChillPatcher.Module.LocalFolder/  ← 本地文件夹模块（SDK 使用示例）
+├── ChillPatcher.Module.LocalIntegration/  ← 本地工具集成模块
 ├── ModuleSystem/               ← 模块加载和管理系统
 ├── Patches/                    ← Harmony 补丁
 ├── UIFramework/                ← UI 框架扩展
@@ -156,6 +167,7 @@ ChillPatcher 提供了 SDK，允许开发者创建自定义音乐源模块（如
 详细文档请参见：
 - **[ChillPatcher.SDK](ChillPatcher.SDK/README.md)** - SDK 接口文档和开发指南
 - **[本地文件夹模块](ChillPatcher.Module.LocalFolder/README.md)** - 完整的模块开发示例
+- **[本地集成模块](ChillPatcher.Module.LocalIntegration/README.md)** - 本地 HTTP 集成入口和处理器扩展示例
 
 ---
 
